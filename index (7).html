@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>REHAN.EDUCATION CLONE (FUNCTIONAL) – WEB-BASED</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehan Education - Digital Mastery for a Connected World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl">RE</div>
+                <div>
+                    <span class="text-3xl font-bold text-gray-900">Rehan Education</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#" onclick="navigateTo('home')" class="nav-link text-gray-700 hover:text-emerald-600">Home</a>
+                <a href="#" onclick="navigateTo('curriculum')" class="nav-link text-gray-700 hover:text-emerald-600">Curriculum</a>
+                <a href="#" onclick="navigateTo('facilitators')" class="nav-link text-gray-700 hover:text-emerald-600">Facilitators</a>
+                <a href="#" onclick="navigateTo('contact')" class="nav-link text-gray-700 hover:text-emerald-600">Contact</a>
+            </div>
+            
+            <button onclick="showEnrollModal()" 
+                    class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">
+                Join Now
+            </button>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home-section" class="section">
+        <!-- Hero -->
+        <div class="bg-gradient-to-br from-emerald-700 via-teal-700 to-cyan-700 text-white py-28">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h1 class="text-6xl font-bold leading-tight mb-6">Digital Mastery for<br>a Connected World</h1>
+                <p class="text-2xl max-w-3xl mx-auto mb-10">Empowering 10+ million students with AI-enabled education, digital skills, and financial independence.</p>
+                <button onclick="navigateTo('curriculum')" 
+                        class="bg-white text-emerald-700 px-10 py-4 rounded-3xl text-xl font-semibold hover:bg-gray-100">
+                    Explore Our Programs →
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-5xl font-bold text-emerald-600">10M+</div>
+                <p class="text-gray-600 mt-2">Students Empowered</p>
+            </div>
+            <div>
+                <div class="text-5xl font-bold text-emerald-600">150+</div>
+                <p class="text-gray-600 mt-2">Courses & Modules</p>
+            </div>
+            <div>
+                <div class="text-5xl font-bold text-emerald-600">95%</div>
+                <p class="text-gray-600 mt-2">Completion Rate</p>
+            </div>
+            <div>
+                <div class="text-5xl font-bold text-emerald-600">50+</div>
+                <p class="text-gray-600 mt-2">Industry Partners</p>
+            </div>
+        </div>
+
+        <!-- Mission -->
+        <div class="max-w-7xl mx-auto px-6 py-20 bg-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Our Mission</h2>
+                <p class="text-xl text-gray-600">To provide world-class, AI-powered digital education that equips teens and young adults with essential 21st-century skills for success in a connected world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM SECTION -->
+    <section id="curriculum-section" class="section hidden max-w-7xl mx-auto px-6 py-16">
+        <h2 class="text-5xl font-bold text-center mb-4">Our Curriculum</h2>
+        <p class="text-center text-xl text-gray-600 mb-12">AI-Enabled • Digital Skills • Financial Literacy</p>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+                <h3 class="text-2xl font-semibold mb-4 text-emerald-600">Digital Skills & AI</h3>
+                <p class="text-gray-600">Master AI tools, coding, data literacy, and digital content creation.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+                <h3 class="text-2xl font-semibold mb-4 text-emerald-600">Online Teaching Proficiency</h3>
+                <p class="text-gray-600">Learn to create, deliver, and monetize online courses.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+                <h3 class="text-2xl font-semibold mb-4 text-emerald-600">Financial Independence</h3>
+                <p class="text-gray-600">Entrepreneurship, freelancing, and smart money management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITATORS SECTION -->
+    <section id="facilitators-section" class="section hidden max-w-7xl mx-auto px-6 py-16">
+        <h2 class="text-5xl font-bold text-center mb-12">Meet Our Expert Team</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10" id="facilitators-list"></div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact-section" class="section hidden max-w-7xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
+                <div class="space-y-6 text-lg">
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-phone text-2xl text-emerald-600 mt-1"></i>
+                        <div>
+                            <p class="font-medium">Call / WhatsApp</p>
+                            <p>+92 444 1839582</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-envelope text-2xl text-emerald-600 mt-1"></i>
+                        <div>
+                            <p class="font-medium">Email</p>
+                            <p>info@rehan.education</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-globe text-2xl text-emerald-600 mt-1"></i>
+                        <div>
+                            <p class="font-medium">Social Media</p>
+                            <p>Facebook, Instagram, Twitter/X</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <form id="contact-form" onsubmit="submitContact(event)" class="bg-white p-8 rounded-3xl shadow">
+                    <input type="text" id="name" placeholder="Your Full Name" required class="w-full mb-4 p-4 border rounded-2xl">
+                    <input type="email" id="email" placeholder="Your Email" required class="w-full mb-4 p-4 border rounded-2xl">
+                    <textarea id="message" placeholder="How can we help you?" rows="5" required class="w-full mb-6 p-4 border rounded-3xl"></textarea>
+                    <button type="submit" class="w-full bg-emerald-600 text-white py-4 rounded-2xl font-semibold hover:bg-emerald-700">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enroll Modal -->
+    <div id="enroll-modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+        <div class="bg-white rounded-3xl p-10 max-w-md w-full mx-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Start Your Digital Journey</h2>
+            <p class="mb-8 text-gray-600">Join thousands of students mastering digital skills with Rehan Education.</p>
+            <button onclick="enrollNow()" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-4 rounded-2xl font-semibold text-lg">Enroll Today</button>
+            <button onclick="closeEnrollModal()" class="mt-4 text-gray-500">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
